@@ -219,11 +219,53 @@ def generate_map(data):
 
     m = folium.Map(location=[data[0]["lat"], data[0]["lon"]], zoom_start=13)
     
-    
+    #make the popup more aesthetically pleasing with a card-like design, rounded corners, and padding
     for restaurant in data:
+
+        popup_html = f"""
+        <div style="
+            font-family: Arial, sans-serif;
+            width: 180px;
+            padding: 5px;
+        ">
+            <div style="
+                font-size: 14px;
+                font-weight: bold;
+                color: #2c3e50;
+                margin-bottom: 6px;
+            ">
+                {restaurant['name']}
+            </div>
+
+            <div style="
+                font-size: 12px;
+                color: #555;
+            ">
+                Dietary Match Score:
+            </div>
+
+            <div style="
+                display: inline-block;
+                background-color: #2ecc71;
+                color: white;
+                padding: 3px 8px;
+                border-radius: 12px;
+                font-size: 12px;
+                margin-top: 4px;
+            ">
+                ⭐ {restaurant['safety_score']}
+            </div>
+        </div>
+        """
+
+        popup = folium.Popup(
+            popup_html,
+            max_width=250
+        )
+
         folium.Marker(
             location=[restaurant["lat"], restaurant["lon"]],
-            popup=f"{restaurant['name']} - Safety Score: {restaurant['safety_score']}"
+            popup=popup
         ).add_to(m)
     
     return m 
