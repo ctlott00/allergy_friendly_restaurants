@@ -246,8 +246,8 @@ def main():
     if "map" not in st.session_state:
         st.session_state.map = None
 
-    # Set the title of the Streamlit app to "Accessible Dining Finder"
-    st.title("Accessible Dining Finder") 
+    # Set the title of the Streamlit app to "EZ Dietary Dining"
+    st.title("EZ Dietary Dining") 
 
     #make the search bar green
     st.markdown("""
