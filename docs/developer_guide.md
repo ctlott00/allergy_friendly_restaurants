@@ -12,21 +12,15 @@ This is a Streamlit-based web application that allows users to search for restau
 project/
 │
 ├── main.py                # Entry point (run this)
-├── fetch_data.py          # API logic (if separated)
-├── utils.py               # Helper functions (optional)
-├── keys.py / .env         # API keys
 ├── requirements.txt
 └── docs/
     └── developer_guide.md
 
 Setup Notes (Developer-Specific)
-Ensure API keys are properly configured
-Environment variables are preferred over hardcoding
 Streamlit runs in a reactive model (important for debugging UI updates)
 
 User Flow → Code Flow
 1. App Launch
-
 main.py initializes the Streamlit UI
 
 2. User Input
@@ -68,12 +62,14 @@ UI Styling
 Custom CSS is injected via:
 st.markdown("<style>...</style>", unsafe_allow_html=True)
 
+
 Important Note
 Streamlit components share selectors like:
 div[data-testid="stTextInput"]
 This can unintentionally style all inputs.
 Fix: Use custom wrappers like:
 <div class="green-search">
+
 
 Known Issues
 Minor:
@@ -125,6 +121,7 @@ Start with main.py
 Trace data flow from input → API → display
 Be careful when modifying CSS (it has global impact)
 Add logging early when debugging
+
 
 Optional Enhancement:
 Deploy via Streamlit Cloud
