@@ -1,3 +1,4 @@
+
 # allergy_friendly_restaurants
 
 EZ Dietaary Dining App: User Guide
@@ -39,9 +40,9 @@ Known Limitations
     UI styling may vary slightly across devices
 
 Screenshots
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
+<img width="1243" height="893" alt="Screenshot 2026-08-03 at 10 41 36 PM" src="https://github.com/user-attachments/assets/5887bed3-dfe8-49e7-a6bd-3b390d51f6fa" />
+<img width="1238" height="897" alt="Screenshot 2026-08-03 at 10 42 09 PM" src="https://github.com/user-attachments/assets/4edf2936-d88e-460c-b99d-cd192163c034" />
+<img width="1118" height="603" alt="Screenshot 2026-08-03 at 10 43 06 PM" src="https://github.com/user-attachments/assets/29c24f5b-c2ba-4092-b737-8b1653c3f142" />
 
 Future Ideas to Improve
     Better filtering (price, rating, cuisine)
